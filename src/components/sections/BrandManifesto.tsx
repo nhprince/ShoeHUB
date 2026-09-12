@@ -2,37 +2,37 @@ import React from 'react';
 
 export const BrandManifesto: React.FC = () => {
   return (
-    <section id="brand" className="py-28 px-6 md:px-12 bg-neutral-900 text-white relative">
+    <section id="brand" className="py-32 px-6 md:px-12 bg-[#050505] text-[#f5f5f3] relative border-t border-white/10">
       <div className="max-w-5xl mx-auto space-y-12 text-center">
-        <span className="text-xs font-mono tracking-widest text-red-500 uppercase">
+        <span className="text-xs font-mono tracking-widest text-[#ff2a2a] uppercase">
           04 // BRAND MANIFESTO
         </span>
 
-        <h2 className="text-4xl md:text-6xl font-extrabold uppercase font-sans tracking-tight leading-tight">
-          WE DO NOT BUILD SHOES TO BE LOOKED AT. <br />
-          <span className="text-neutral-500">WE ENGINEER THEM TO BE LIVED IN.</span>
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase font-['Syne'] tracking-tight leading-none">
+          WE DO NOT BUILD SHOES FOR DISPLAY. <br />
+          <span className="text-outline">WE ENGINEER THEM FOR MOVEMENT.</span>
         </h2>
 
-        <p className="text-base md:text-lg text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed">
-          ShoeHub exists at the sharp intersection of athletic innovation, architectural minimalism, and raw human movement. We reject disposable fashion in favor of timeless geometry, sustainable material integrity, and unyielding durability.
+        <p className="text-base md:text-xl text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed">
+          ShoeHub exists at the threshold of athletic innovation, architectural minimalism, and raw physical motion. We reject ephemeral trends in favor of timeless structural geometry and unyielding material durability.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-neutral-800 font-mono">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-white/10 font-mono">
           <div>
-            <p className="text-3xl font-extrabold text-white">0.00%</p>
-            <p className="text-xs text-neutral-400 mt-1 uppercase">PLASTIC FOAM WASTE</p>
+            <p className="text-4xl font-extrabold text-white">0.00%</p>
+            <p className="text-[10px] text-neutral-400 mt-1 uppercase tracking-widest">VIRGIN PLASTIC WASTE</p>
           </div>
           <div>
-            <p className="text-3xl font-extrabold text-white">100%</p>
-            <p className="text-xs text-neutral-400 mt-1 uppercase">CARBON OFFSETTED</p>
+            <p className="text-4xl font-extrabold text-white">100%</p>
+            <p className="text-[10px] text-neutral-400 mt-1 uppercase tracking-widest">CARBON NEUTRAL PRODUCTION</p>
           </div>
           <div>
-            <p className="text-3xl font-extrabold text-white">1,000 KM</p>
-            <p className="text-xs text-neutral-400 mt-1 uppercase">GUARANTEED SOLE LIFE</p>
+            <p className="text-4xl font-extrabold text-white">1,000 KM</p>
+            <p className="text-[10px] text-neutral-400 mt-1 uppercase tracking-widest">GUARANTEED MILEAGE</p>
           </div>
           <div>
-            <p className="text-3xl font-extrabold text-white">24/7</p>
-            <p className="text-xs text-neutral-400 mt-1 uppercase">GLOBAL SUPPORT</p>
+            <p className="text-4xl font-extrabold text-white">24/7</p>
+            <p className="text-[10px] text-neutral-400 mt-1 uppercase tracking-widest">GLOBAL CONCIERGE</p>
           </div>
         </div>
       </div>

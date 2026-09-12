@@ -47,44 +47,44 @@ export const CraftTechStory: React.FC = () => {
   const current = content[activeTab];
 
   return (
-    <section id="story" className="py-28 px-6 md:px-12 bg-neutral-900 text-white relative overflow-hidden">
+    <section id="story" className="py-32 px-6 md:px-12 bg-[#050505] text-[#f5f5f3] relative border-t border-white/10 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
         <div className="space-y-4 text-center max-w-3xl mx-auto">
           <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase">
             02 // CRAFT & MATERIAL ARCHITECTURE
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase font-sans">
-            ENGINEERED TO THE MICRON
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight uppercase font-['Syne']">
+            ENGINEERED TO MICRONS
           </h2>
-          <p className="text-sm md:text-base text-neutral-400 font-light">
-            Every component of ShoeHub footwear is meticulously researched, prototyped, and tested to harmonize human biology with physical performance.
+          <p className="text-sm md:text-base text-neutral-400 font-light leading-relaxed">
+            Every component of ShoeHub footwear is meticulously researched, prototyped, and tested to harmonize human biology with physical motion.
           </p>
         </div>
 
         {/* Interactive Story Tabs */}
-        <div className="flex justify-center border-b border-neutral-800 pb-4">
-          <div className="inline-flex p-1 bg-neutral-950 rounded-xl border border-neutral-800 font-mono text-xs">
+        <div className="flex justify-center border-b border-white/10 pb-6">
+          <div className="inline-flex p-1.5 bg-black rounded-full border border-white/10 font-mono text-xs">
             <button
               onClick={() => setActiveTab('material')}
-              className={`px-6 py-2.5 rounded-lg uppercase tracking-widest transition-all flex items-center gap-2 ${
-                activeTab === 'material' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
+              className={`px-6 py-3 rounded-full uppercase tracking-widest transition-all flex items-center gap-2 ${
+                activeTab === 'material' ? 'bg-white text-black font-bold shadow-lg' : 'text-neutral-400 hover:text-white'
               }`}
             >
               <Sparkles className="w-4 h-4" /> Upper Knit
             </button>
             <button
               onClick={() => setActiveTab('midsole')}
-              className={`px-6 py-2.5 rounded-lg uppercase tracking-widest transition-all flex items-center gap-2 ${
-                activeTab === 'midsole' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
+              className={`px-6 py-3 rounded-full uppercase tracking-widest transition-all flex items-center gap-2 ${
+                activeTab === 'midsole' ? 'bg-white text-black font-bold shadow-lg' : 'text-neutral-400 hover:text-white'
               }`}
             >
               <Cpu className="w-4 h-4" /> Midsole Foam
             </button>
             <button
               onClick={() => setActiveTab('outsole')}
-              className={`px-6 py-2.5 rounded-lg uppercase tracking-widest transition-all flex items-center gap-2 ${
-                activeTab === 'outsole' ? 'bg-white text-black font-bold' : 'text-neutral-400 hover:text-white'
+              className={`px-6 py-3 rounded-full uppercase tracking-widest transition-all flex items-center gap-2 ${
+                activeTab === 'outsole' ? 'bg-white text-black font-bold shadow-lg' : 'text-neutral-400 hover:text-white'
               }`}
             >
               <Layers className="w-4 h-4" /> Outsole Grip
@@ -95,30 +95,30 @@ export const CraftTechStory: React.FC = () => {
         {/* Dynamic Display Panel */}
         <motion.div
           key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-neutral-950/60 border border-neutral-800/80 rounded-2xl p-8 md:p-12 shadow-2xl"
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#0f0f10] border border-white/10 rounded-2xl p-8 md:p-14 shadow-2xl backdrop-blur-2xl"
         >
           {/* Left Text Detail */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-neutral-900 border border-neutral-800 text-[10px] font-mono text-red-400 tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-black border border-white/10 text-[10px] font-mono text-[#ff2a2a] tracking-wider uppercase">
               SPECIFICATION DETAIL
             </div>
-            <h3 className="text-3xl md:text-4xl font-extrabold uppercase font-sans tracking-tight">
+            <h3 className="text-3xl md:text-5xl font-extrabold uppercase font-['Syne'] tracking-tight">
               {current.title}
             </h3>
-            <p className="text-sm font-mono text-neutral-400 tracking-wider uppercase">
+            <p className="text-xs font-mono text-neutral-400 tracking-wider uppercase">
               {current.subtitle}
             </p>
-            <p className="text-sm text-neutral-300 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-neutral-300 font-light leading-relaxed">
               {current.description}
             </p>
 
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-neutral-800 font-mono">
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 font-mono">
               {current.specs.map((s) => (
                 <div key={s.label}>
-                  <p className="text-[10px] text-neutral-500 uppercase">{s.label}</p>
+                  <p className="text-[10px] text-neutral-500 uppercase tracking-widest">{s.label}</p>
                   <p className="text-base font-bold text-white mt-1">{s.value}</p>
                 </div>
               ))}
@@ -126,13 +126,13 @@ export const CraftTechStory: React.FC = () => {
           </div>
 
           {/* Right Imagery Showcase */}
-          <div className="lg:col-span-6 h-80 md:h-96 rounded-xl overflow-hidden border border-neutral-800 relative group">
+          <div className="lg:col-span-6 h-88 md:h-[420px] rounded-2xl overflow-hidden border border-white/10 relative group">
             <img
               src={current.image}
               alt={current.title}
-              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-neutral-950/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
           </div>
         </motion.div>
       </div>

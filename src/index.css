@@ -1,9 +1,88 @@
 @import "tailwindcss";
 
 @layer base {
-  body {
-    background-color: #0a0a0b;
-    color: #ffffff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  :root {
+    --bg-primary: #050505;
+    --bg-surface: #0f0f10;
+    --bg-surface-elevated: #161618;
+    --text-primary: #f5f5f3;
+    --text-secondary: #8e8e93;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-bright: rgba(255, 255, 255, 0.2);
+    --accent-red: #ff2a2a;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection-background-color: #ffffff;
+    selection-color: #000000;
+  }
+}
+
+/* Kinetic Ticker Keyframes */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 25s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Kinetic Typography Outline effect */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+  color: transparent;
+  transition: all 0.4s ease;
+}
+
+.text-outline:hover {
+  color: #ffffff;
+  -webkit-text-stroke: 1.5px transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222225;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #44444a;
 }

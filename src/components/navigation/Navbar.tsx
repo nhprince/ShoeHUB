@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/80 py-4'
+            ? 'bg-black/90 backdrop-blur-md border-b border-white/10 py-4'
             : 'bg-transparent py-6'
         }`}
       >
@@ -39,8 +39,8 @@ export const Navbar: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center gap-2 group text-left"
           >
-            <span className="text-xl font-bold tracking-widest text-white uppercase font-mono">
-              SHOE<span className="text-red-500">HUB</span>
+            <span className="text-2xl font-bold tracking-widest text-white uppercase font-['Syne']">
+              SHOE<span className="text-[#ff2a2a]">HUB</span>
             </span>
           </button>
 
@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
             >
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-mono font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-[#ff2a2a] text-white text-[10px] font-mono font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -101,9 +101,9 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 top-[60px] z-30 bg-neutral-950 flex flex-col px-8 py-12 md:hidden"
+            className="fixed inset-0 top-[60px] z-30 bg-black flex flex-col px-8 py-12 md:hidden border-b border-white/10"
           >
-            <div className="flex flex-col space-y-8 text-lg font-mono tracking-widest uppercase text-neutral-300">
+            <div className="flex flex-col space-y-8 text-xl font-mono tracking-widest uppercase text-neutral-300">
               <button onClick={() => scrollTo('collection')} className="text-left hover:text-white">
                 01 // Collection
               </button>

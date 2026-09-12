@@ -22,16 +22,16 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-neutral-950 text-white border-t border-neutral-900 pt-20 pb-12 px-6 md:px-12 font-mono text-xs">
+    <footer className="bg-[#050505] text-[#f5f5f3] border-t border-white/10 pt-24 pb-12 px-6 md:px-12 font-mono text-xs">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-6">
-            <span className="text-2xl font-bold tracking-widest text-white uppercase font-sans">
-              SHOE<span className="text-red-500">HUB</span>
+            <span className="text-3xl font-bold tracking-widest text-white uppercase font-['Syne']">
+              SHOE<span className="text-[#ff2a2a]">HUB</span>
             </span>
             <p className="text-neutral-400 font-light leading-relaxed max-w-sm">
-              An independent footwear design house dedicated to athletic innovation, minimal architecture, and sustainable performance.
+              An independent footwear design house dedicated to athletic innovation, minimal architecture, and sustainable kinetic performance.
             </p>
 
             {/* Newsletter */}
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
               </span>
 
               {subscribed ? (
-                <div className="flex items-center gap-2 text-emerald-400 bg-neutral-900 border border-neutral-800 p-3 rounded">
+                <div className="flex items-center gap-2 text-emerald-400 bg-black border border-white/10 p-3 rounded-full">
                   <Check className="w-4 h-4" />
                   <span>Subscribed to private drops.</span>
                 </div>
@@ -53,11 +53,11 @@ export const Footer: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter email address"
-                    className="bg-neutral-900 border border-neutral-800 text-white p-3 rounded w-full focus:outline-none focus:border-white"
+                    className="bg-black border border-white/10 text-white p-3 rounded-full w-full focus:outline-none focus:border-white px-5"
                   />
                   <button
                     type="submit"
-                    className="bg-white text-black px-5 font-bold uppercase hover:bg-neutral-200 transition-colors flex items-center justify-center"
+                    className="bg-white text-black px-6 font-bold uppercase hover:bg-neutral-200 transition-colors flex items-center justify-center rounded-full"
                   >
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -70,11 +70,11 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2 space-y-4">
             <p className="text-white font-bold uppercase tracking-wider">COLLECTION</p>
             <ul className="space-y-2.5 text-neutral-400">
-              <li><a href="#collection" className="hover:text-white">ShoeHub AERO</a></li>
-              <li><a href="#collection" className="hover:text-white">ShoeHub FORM</a></li>
-              <li><a href="#collection" className="hover:text-white">ShoeHub FLOW</a></li>
-              <li><a href="#collection" className="hover:text-white">ShoeHub CORE</a></li>
-              <li><a href="#collection" className="hover:text-white">ShoeHub STUDIO</a></li>
+              <li><a href="#collection" className="hover:text-white transition-colors">ShoeHub AERO</a></li>
+              <li><a href="#collection" className="hover:text-white transition-colors">ShoeHub FORM</a></li>
+              <li><a href="#collection" className="hover:text-white transition-colors">ShoeHub FLOW</a></li>
+              <li><a href="#collection" className="hover:text-white transition-colors">ShoeHub CORE</a></li>
+              <li><a href="#collection" className="hover:text-white transition-colors">ShoeHub STUDIO</a></li>
             </ul>
           </div>
 
@@ -82,10 +82,10 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2 space-y-4">
             <p className="text-white font-bold uppercase tracking-wider">COMPANY</p>
             <ul className="space-y-2.5 text-neutral-400">
-              <li><a href="#brand" className="hover:text-white">Manifesto</a></li>
-              <li><a href="#story" className="hover:text-white">Material Craft</a></li>
-              <li><a href="#editorial" className="hover:text-white">Campaign 2025</a></li>
-              <li><a href="#" className="hover:text-white">Sustainability</a></li>
+              <li><a href="#brand" className="hover:text-white transition-colors">Manifesto</a></li>
+              <li><a href="#story" className="hover:text-white transition-colors">Material Craft</a></li>
+              <li><a href="#editorial" className="hover:text-white transition-colors">Campaign 2025</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Sustainability</a></li>
             </ul>
           </div>
 
@@ -93,16 +93,16 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-3 space-y-4">
             <p className="text-white font-bold uppercase tracking-wider">SUPPORT & LEGAL</p>
             <ul className="space-y-2.5 text-neutral-400">
-              <li><a href="#" className="hover:text-white">Global Express Shipping</a></li>
-              <li><a href="#" className="hover:text-white">30-Day Guarantee</a></li>
-              <li><a href="#" className="hover:text-white">Privacy & Terms</a></li>
-              <li><a href="#" className="hover:text-white">Cloudflare Pages Worker Status</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Global Express Shipping</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">30-Day Guarantee</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Privacy & Terms</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Cloudflare Pages Worker Status</a></li>
             </ul>
           </div>
         </div>
 
         {/* Footer Bottom Line */}
-        <div className="pt-8 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center text-neutral-500 gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-neutral-500 gap-4">
           <p>© {new Date().getFullYear()} SHOEHUB INC. ALL RIGHTS RESERVED.</p>
           <p>POWERED BY CLOUDFLARE PAGES & WORKERS FREE TIER</p>
         </div>
